@@ -1,0 +1,32 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Headlines
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title size="large">Headlines</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- ionChange se diaparara cuando cambie de segmento, selectedCategory
+  lo uso para que aparezca como activado-->
+  <ion-segment [value]="selectedCategory" (ionChange)="segmentChanged($event)" mode="md" scrollable>
+    
+    <!--Itero sobre el array de categories y hago binding-->
+    <ion-segment-button 
+      *ngFor="let category of categories"
+      [value]="category">
+      <ion-label class="ion-text-capitalize">{{category}}</ion-label>
+    </ion-segment-button>
+
+  </ion-segment> 
+
+  <app-articles [articles]="articles" >// Data binding, cuidado no usar espacios en los corchetes
+  </app-articles>
+
+</ion-content>
