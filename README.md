@@ -1,6 +1,12 @@
 ![universidad-europea-logo](https://user-images.githubusercontent.com/17354471/218064896-b8411ee7-5cec-4e97-8a71-216a4e6f3bf4.png)
 
+
+
+
 **NewsApp** es una aplicación multiplataforma creada usando los frameworks: Ionic y Angular
+![News](https://github.com/user-attachments/assets/b2287190-035b-4fa4-b75b-ca4447c7a1b3)
+![Categories](https://github.com/user-attachments/assets/3e3cb060-5798-411d-b7d9-1b2168f1c1f6)
+
 
 
 ## Funcionalidades
