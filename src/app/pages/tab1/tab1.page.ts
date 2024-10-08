@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // NewsService: Servicio que se utiliza para obtener noticias.
 import { NewsService } from '../../services/news.service';
 // NewsResp, Article: Interfaces que definen la estructura de los datos de noticias.
-import { NewsResp, Article } from '../../interfaces';
+import { Article } from '../../interfaces';
 @Component({
   //Nombre del selector del componente, utilizado en el HTML para insertar este componente.
   selector: 'app-tab1',

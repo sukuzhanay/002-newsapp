@@ -19,8 +19,10 @@ export interface Source {
     name: Name;
 }
 export enum ID {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
     Techcrunch = 'techcrunch',
 }
 export enum Name {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
     TechCrunch = 'TechCrunch',
 }

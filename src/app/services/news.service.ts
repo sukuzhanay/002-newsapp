@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 //Contiene variables de entorno, como la clave API de NewsAPI.
 import { environment } from 'src/environments/environment';
 //Interfaces que definen la estructura de los datos.
-import { Article, NewsResp } from '../interfaces/index';
+import { Article, NewsResp } from '../interfaces';
 //Operador de transformación, utilizado para transformar la salida de un observable.
 import { map } from 'rxjs/operators';
 
