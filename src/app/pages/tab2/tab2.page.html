@@ -16,15 +16,20 @@
   <!-- ionChange se diaparara cuando cambie de segmento, selectedCategory
   lo uso para que aparezca como activado-->
   <ion-segment [value]="selectedCategory" (ionChange)="segmentChanged($event)" mode="md" scrollable>
-    
+
     <!--Itero sobre el array de categories y hago binding-->
-    <ion-segment-button 
+    <!-- *ngForEs una directiva estructural de Angular que se utiliza para iterar sobre una lista.
+    En este caso, itera sobre la lista categories.
+    let category of categories: Define una variable category que representa cada elemento de la
+    lista categories en cada iteración.-->
+
+    <ion-segment-button
       *ngFor="let category of categories"
       [value]="category">
       <ion-label class="ion-text-capitalize">{{category}}</ion-label>
     </ion-segment-button>
 
-  </ion-segment> 
+  </ion-segment>
 
   <app-articles [articles]="articles" >// Data binding, cuidado no usar espacios en los corchetes
   </app-articles>

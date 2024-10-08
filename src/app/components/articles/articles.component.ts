@@ -7,7 +7,7 @@ import { Article } from '../../interfaces/index';
 })
 export class ArticlesComponent implements OnInit {
   // Traigo los artículos con @Input
-  @Input() articles : Article[]=[];
+  @Input() articles: Article[]=[];
   constructor() { }
   ngOnInit() {}
 }

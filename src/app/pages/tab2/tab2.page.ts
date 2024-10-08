@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AnyForUntypedForms } from '@angular/forms';
 import { NewsService } from 'src/app/services/news.service';
 // Importo la interfaz
-import { NewsResp, Article } from '../../interfaces/index';
+import { Article } from '../../interfaces';
 
 @Component({
   selector: 'app-tab2',
@@ -12,31 +11,29 @@ import { NewsResp, Article } from '../../interfaces/index';
 // Implemento la primera peticion OnInit
 export class Tab2Page implements OnInit {
 
-  // Creo una nueva propiedad, que sera un arreglo de strings 
+  // Creo una nueva propiedad, que sera un arreglo de strings
   public categories: string[] =['business','entertainment','general','health','science','sports','technology'];
   // Creo propiedad selectedCategory y Pongo el valor a 'general'
-  public selectedCategory:string = this.categories[2];
+  public selectedCategory: string = this.categories[6];
   // Propiedad para mostrar los articulos
-  public articles:Article[]=[];
+  public articles: Article[]=[];
 
   // inyecto servicio NewsService
-  constructor(private newsService:NewsService ) {}
-  
+  constructor(private newsService: NewsService ) {}
   ngOnInit(){
     this.newsService.getTopHeadlinesByCategory(this.selectedCategory)
     .subscribe(articles => {
       this.articles =[...this.articles,...articles];
-    })
-      
+    });
   }
 
   // Funcion que maneja el cambio de segmentos
-  segmentChanged( event:any){
+  segmentChanged( event: any){
     this.selectedCategory = event.detail.value;
     this.newsService.getTopHeadlinesByCategory(this.selectedCategory)
     .subscribe(articles => {
       this.articles =[...articles];
 
-    })
+    });
   }
 }

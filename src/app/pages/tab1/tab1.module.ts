@@ -14,7 +14,7 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule, 
+    Tab1PageRoutingModule,
     ComponentsModule // Importo este módulo para dar acceso a los dos componentes creados Article y Articles
   ],
   declarations: [Tab1Page]

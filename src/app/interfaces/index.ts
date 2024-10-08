@@ -19,8 +19,8 @@ export interface Source {
     name: Name;
 }
 export enum ID {
-    Techcrunch = "techcrunch",
+    Techcrunch = 'techcrunch',
 }
 export enum Name {
-    TechCrunch = "TechCrunch",
+    TechCrunch = 'TechCrunch',
 }

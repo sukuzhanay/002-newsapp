@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article } from '../../interfaces/index';
+import { Article } from '../../interfaces';
 
 @Component({
   selector: 'app-article',
@@ -8,7 +8,7 @@ import { Article } from '../../interfaces/index';
 })
 export class ArticleComponent implements OnInit {
   // Inyecto articulos usando la interfaz, ver linea 2
-  @Input() article:Article ;
+  @Input() article: Article ;
   @Input() index: number;
 
   constructor() { }
