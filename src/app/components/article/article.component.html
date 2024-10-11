@@ -1,24 +1,37 @@
-<!--Creo una tarjeta por cada elemento (noticia)-->
 <ion-card>
   <ion-card-subtitle class="ion-margin">
-    <!--Print el num. del elemento y el origen de la noticia-->
-    <span class="text-primary">{{ index }}. </span>
-    <span class="article-source-name">{{article.source.name}}</span>
+
+    <ion-row class="ion-align-items-center">
+
+      <ion-col class="ion-margin" (click)="openArticle()">
+        <span class="text-primary">{{ index }}. </span>
+        <span class="article-source-name">{{ article.source.name }}</span>
+      </ion-col>
+
+      <ion-col align="right">
+        <ion-button (click)="onOpenMenu()" fill="clear">
+          <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
   </ion-card-subtitle>
-  <!--Addwd news title w/ styles-->
+
   <ion-card-title class="ion-padding-horizontal ion-margin-bottom">
-    {{ article.title}}
+    {{ article.title }}
   </ion-card-title>
-  <!--add img solo si existe lo guardo en [src]-->
-  <ion-img *ngIf="article.urlToImage" [src]="article.urlToImage" >
-  </ion-img>
-  <!--Add content, if no content, use *ngIf-->
-  <ion-card-content *ngIf=" article.description">
-    <p>{{ article.description}}</p>
+
+
+  <ion-img
+    *ngIf="article.urlToImage"
+    [src]="article.urlToImage"
+    (click)="openArticle()"
+  ></ion-img>
+
+  <ion-card-content
+    *ngIf="article.description">
+    <p>{{ article.description }}</p>
   </ion-card-content>
-  <!--Add button to add or remove from favorites-->
-  <ion-button fill="clear" class="favorite-btn">
-    <ion-icon *ngIf="!isFavorite(article)" name="heart-outline"></ion-icon>
-    <ion-icon *ngIf="isFavorite(article)" name="heart"></ion-icon>
-  </ion-button>
+
 </ion-card>

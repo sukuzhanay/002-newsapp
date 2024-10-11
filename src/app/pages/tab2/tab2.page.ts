@@ -19,7 +19,20 @@ export class Tab2Page implements OnInit {
   public articles: Article[]=[];
 
   // inyecto servicio NewsService
+
   constructor(private newsService: NewsService ) {}
+  // eslint-disable-next-line max-len
+  // ngOnInit es un método del ciclo de vida de Angular que se llama después de que Angular inicializa las propiedades
+  //  vinculadas a datos del componente. Es un buen lugar para inicializar la lógica del componente, como cargar datos
+  //  desde un servicio.
+
+  //subscribe(articles => { ... }) se suscribe al Observable devuelto por getTopHeadlinesByCategory. Cuando los datos
+  // (en este caso, los artículos) están disponibles, se ejecuta la función de devolución de llamada
+  // (articles => { ... }).
+
+  //this.articles = [...this.articles, ...articles]; actualiza la propiedad articles del componente. Utiliza el
+  //operador de propagación (...) para combinar los artículos existentes (this.articles) con los nuevos artículos
+  // (articles) obtenidos del servicio
   ngOnInit(){
     this.newsService.getTopHeadlinesByCategory(this.selectedCategory)
     .subscribe(articles => {
