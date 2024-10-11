@@ -16,5 +16,9 @@
   <ion-card-content *ngIf=" article.description">
     <p>{{ article.description}}</p>
   </ion-card-content>
-
+  <!--Add button to add or remove from favorites-->
+  <ion-button fill="clear" class="favorite-btn">
+    <ion-icon *ngIf="!isFavorite(article)" name="heart-outline"></ion-icon>
+    <ion-icon *ngIf="isFavorite(article)" name="heart"></ion-icon>
+  </ion-button>
 </ion-card>

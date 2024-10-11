@@ -10,9 +10,13 @@ export class ArticleComponent implements OnInit {
   // Inyecto articulos usando la interfaz, ver linea 2
   @Input() article: Article ;
   @Input() index: number;
+  @Input() inFavorites: boolean;
 
   constructor() { }
 
   ngOnInit() {}
 
+  isFavorite(article: Article) {
+    return false;
+  }
 }
