@@ -6,7 +6,7 @@ import { Article } from '../../interfaces';
   styleUrls: ['./articles.component.scss'],
 })
 export class ArticlesComponent implements OnInit {
-  // Traigo los artículos con @Input
+  // Traigo los artículos como argumento de la clase ArticlesComponent con @Input
   @Input() articles: Article[]=[];
   constructor() { }
   ngOnInit() {}
