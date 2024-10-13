@@ -37,4 +37,8 @@ export class ArticleComponent implements OnInit {
 
     }
   }
+
+  onOpenMenu() {
+
+  }
 }
