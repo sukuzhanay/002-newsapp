@@ -1,37 +1,35 @@
 <ion-card>
   <ion-card-subtitle class="ion-margin">
 
+    <!--Add row to align article source name and menu button-->
     <ion-row class="ion-align-items-center">
-
       <ion-col class="ion-margin" (click)="openArticle()">
         <span class="text-primary">{{ index }}. </span>
         <span class="article-source-name">{{ article.source.name }}</span>
       </ion-col>
 
-      <ion-col align="right">
+      <!--Add menu button to open menu-->
+      <ion-col align= "right">
         <ion-button (click)="onOpenMenu()" fill="clear">
-          <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+          <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
         </ion-button>
       </ion-col>
     </ion-row>
 
-
   </ion-card-subtitle>
 
-  <ion-card-title class="ion-padding-horizontal ion-margin-bottom">
+  <!--Add title, image, and description to the card-->
+  <ion-card-title class="ion-padding-horizontal ion-margin-bottom" (click)="openArticle()">
     {{ article.title }}
   </ion-card-title>
 
-
   <ion-img
-    *ngIf="article.urlToImage"
-    [src]="article.urlToImage"
-    (click)="openArticle()"
-  ></ion-img>
+    *ngIf="article.urlToImage" [src]="article.urlToImage" (click)="openArticle()">
+  </ion-img>
 
   <ion-card-content
-    *ngIf="article.description">
-    <p>{{ article.description }}</p>
+    *ngIf="article.description" (click)="openArticle()">
+    <p>{{ article.description }} </p>
   </ion-card-content>
 
 </ion-card>
